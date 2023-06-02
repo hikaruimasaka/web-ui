@@ -18,11 +18,11 @@ spec:
     spec: 
       containers: 
       - name: web-ui 
-        image: gcr.io/lease-prod/web-ui:test2
+        image: gcr.io/$_PROJECT_ID/$_MICRO_NAME:$TAG_NAME
         imagePullPolicy: Always 
         env: 
           - name: ENV 
-            value: dev
+            value: $_TYPE
           - name: API_ADDRESS 
             value: "minio-api" 
           - name: API_SERVER_PORT 
@@ -31,4 +31,4 @@ spec:
         - containerPort: 80 
           hostPort: 80 
       nodeSelector: 
-        cloud.google.com/gke-nodepool: pool-web 
+        cloud.google.com/gke-nodepool: $_NODE
