@@ -18,7 +18,7 @@ spec:
     spec: 
       containers: 
       - name: web-ui 
-        image: gcr.io/$_PROJECT_ID/$_MICRO_NAME:$TAG_NAME
+        image: gcr.io/$_PROJECT_ID/$_MICRO_NAME:$TAG_NAME 
         imagePullPolicy: Always 
         env: 
           - name: ENV 
